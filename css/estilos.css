@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+h1{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 50px;
+    color: white;
+}
+h2{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+header {
+    text-align: center;
+    color: black;
+    padding: 10px auto;
+}
+header div{
+ margin-left: 25%;
+  
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 0%;
+  animation: decoracion 4s infinite alternate;
+ 
+}
+@keyframes decoracion {
+  from{background-color: red;transform:translateX(0px); border-radius:0%}
+
+  to{
+    
+    background-color: black;transform:translateX(5000%); border-radius:50%
+  }
+}
+ul {
+    padding: 5%;
+    margin:auto;
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+ul a, header a{
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+    display: block;
+    line-height:20px;
+    padding: 3px;
+    transition: all 1s;
+  
+}
+footer div{
+  width: 100%;
+  height: 20px;
+  background-image: url(../imagenes/m.svg);
+  background-size: 20px;
+  background-repeat:  repeat-x;
+  background-position: top;
+}
+ul a:hover, header a:hover {
+    background-color: red;
+    color: white;
+    text-align: center; 
+    border-radius: 0px;
+   
+    }
+
+
+body{
+    background: linear-gradient( rgb(179, 179, 179), rgb(0, 0, 0));
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    
+    
+    
+}
+p {
+  
+    text-align: center;
+    color: white;
+
+}
+
+
+
+
+main{
+ width: 90%;
+margin: auto;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    text-align: center;
+    
+    }
+    
+    
+    div {
+    width: 30%;
+    }
+    
+
+    #video {
+    width: 90%;
+    margin:10px auto;
+    
+    }
+    
+    
+    img, video {
+         width: 100%;
+    }
+ h3,footer{
+  font-family:"IBM Plex Mono", monospace ;
+        text-align: center;
+        background-color: red;
+        padding: 10px;
+        font-size:15PX;
+        margin-bottom: 10px auto;
+        color: white; 
+        
+    }
+
+
+
+.contenedor {
+    margin: 20px auto 70px;
+    width:30%;
+    height: 300px;
+    perspective: 500px;
+    position: relative;
+    transform: scale(1);
+   
+   
+  }
+  
+  .cubo {
+    width:100%;
+    height: 100%;
+  transform-style: preserve-3d;
+  position: absolute;
+    animation: gira 15s infinite;
+  
+    
+  }
+  
+
+  .lado{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    
+  }
+  
+ .lado1 { /* Frente */
+    transform: translateZ(150px);
+    
+  }
+  
+ .lado2 { /* Atrás */
+    transform: rotateY(180deg) translateZ(150px);
+    
+  }
+  
+ .lado3 { /* Izquierda */
+    transform: rotateY(-90deg) translateZ(150px);
+  }
+  
+ .lado4 { /* derecha */
+    transform: rotateY(90deg) translateZ(150px);
+    
+  }
+  
+
+  
+  @keyframes gira {
+    0% {
+      transform: translateZ(-150px) rotateY(0deg);
+    }
+    25%{
+        transform: translateZ(-150px) rotateY(90deg);
+      }
+      50%{
+        transform: translateZ(-150px) rotateY(180deg);
+      }
+      75%{
+        transform: translateZ(-150px) rotateY(270deg);
+      }
+    100% {
+      transform: translateZ(-150px) rotateY(360deg);
+    }
+  }
+
+
+
